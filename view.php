@@ -16,12 +16,19 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <?php
+    if($row = mysqli_fetch_object($result)){    
+  ?>
   <h1>글 상세</h1>
-  <h2>글쓴이: </h2>
+  <h2>글쓴이: <?= $row->username; ?></h2>
   <h3>글내용</h3>
   <div>
-
+    <?= $row->usermsg; ?>
   </div>
+  <?php
+    } else{
+      echo "<script>alert('해당글이 없습니다'); location.href='index.php';</script>";
+    }
+  ?>
 </body>
 </html>

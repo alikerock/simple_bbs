@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>글쓰기</h1>
-  <form action="">
+  <form action="insert.php" method="POST">
     <p>
       <label for="username">이름:</label>
       <input type="text" id="username" name="username" require>
